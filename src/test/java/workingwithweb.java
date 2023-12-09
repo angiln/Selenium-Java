@@ -4,8 +4,9 @@ import org.openqa.selenium.WebElement;
 
 public class workingwithweb {
 
-    private String button="//button[@class=\"CybotCookiebotDialogBodyButton\"]";
-    private String selects="//select[@name=\"employees_c\"]";
+    private String username="//*[@id=\"username\"]";
+    private String password="//*[@id=\"pwd\"]";
+    private String loginbtn="//*[@name=\"login\"]";
 
      public WebDriver driver;
       public workingwithweb(WebDriver driver){
@@ -15,7 +16,8 @@ public class workingwithweb {
 //        System.out.println("Hello");
 //    }
 
-    public WebElement getbutton(){ return driver.findElement(By.xpath(button));}
-    public WebElement getselects(){ return driver.findElement(By.xpath(selects));}
+    public WebElement getusername(){ return driver.findElement(By.xpath(username));}
+    public WebElement getpassword(){ return driver.findElement(By.xpath(password));}
+    public WebElement getloginbtn(){ return driver.findElement(By.xpath(loginbtn));}
 }
 

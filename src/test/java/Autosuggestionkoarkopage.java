@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 
 public class Autosuggestionkoarkopage {
     private WebDriver driver;
-    private String random="//button[text()=\"Try it\"]";
+    private String random="//body//child::button";
     private String runbtn="//a[@id=\"getwebsitebtn\"]";
     private String inputf="//input[@placeholder=\"From\"]";
     private String popup="//input[@name=\"username\"]";
