@@ -15,7 +15,7 @@ public class Handelingwindows {
     public void beforetest() throws InterruptedException{
         System.setProperty("web-driver.chrome.driver","D:\\\\browserdriver\\\\chromedriver\\\\chromedriver.exe");
         driver=new ChromeDriver();
-        driver.get("https://www.salesforce.com/au/");
+        driver.get("https://www.hamropatro.com/remit");
         nayapage=new Handelingwindowskoarkopage(driver);
         driver.manage().window().maximize();
 
@@ -23,19 +23,27 @@ public class Handelingwindows {
     @Test
     public void firsttest() throws InterruptedException{
         Thread.sleep(1000);
-        nayapage.getstartfree().click();
+//        nayapage.getstartfree().click();
+        nayapage.getgift().click();
+        Thread.sleep(1000);
+//        nayapage.getrecharge().click();
 
 
         Set<String> windowhandles=driver.getWindowHandles();
         Iterator<String> iterator=windowhandles.iterator();
         String parent=iterator.next();
         String child1=iterator.next();
+//        String child2=iterator.next();
+       System.out.println(parent);
+        System.out.println(child1);
+//        System.out.println(child2);
 
         driver.switchTo().window(child1);
-        Thread.sleep(1000);
-
-        Thread.sleep(1000);
-        driver.switchTo().window(parent);
+        driver.close();
+//        Thread.sleep(1000);
+//        driver.switchTo().window(child2);
+//        Thread.sleep(1000);
+//        driver.switchTo().window(parent);
     }
 }
 
